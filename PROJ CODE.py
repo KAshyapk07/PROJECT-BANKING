@@ -72,6 +72,9 @@ class CreditCardManagementApp:
         self.register_button = ttk.Button(self.login_frame, text="Register", command=self.register)
         self.register_button.grid(row=4, column=0, columnspan=2, pady=10)
     def register(self):
+        global registered_users = []
+        registered_users = []
+        
         global temp_name
         global temp_age
         global temp_email
@@ -299,7 +302,7 @@ class CreditCardManagementApp:
                                             f"{transaction['date']} - ${transaction['amount']} - {transaction['merchant']}")
 
 # List to store registered users
-registered_users = []
+
 
 if __name__ == "__main__":
     root = tk.Tk()
